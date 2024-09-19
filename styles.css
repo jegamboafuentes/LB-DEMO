@@ -7,67 +7,86 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black; /* change with font color viva mexico */
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .banner {
   width: 100%;
-  max-height: 300px;
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  object-fit: cover;
+  border: 5px solid #ee8b2b;
+  padding: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
 }
 
 .content {
   margin: 20px 0;
   text-align: center;
   font-size: 24px;
-  border: 1px solid black;
-  padding: 20px;
-  width: 80%;
+  color: #ffffff; /* change with background */
+  font-weight: 900;
+  border: 5px solid #ee8b2b;
+  padding: 10px;
+  width: calc(100% - 20px);
 }
 
 .logos {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
-  border: 1px solid black;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(100% - 20px);
 }
 
 .logo {
-  border: 1px solid black;
-  padding: 50px;
+  border: 5px solid #ee8b2b;
+  padding: 10px;
   text-align: center;
-  width: 30%;
-  background-color: #f0f0f0;
-  /* mikes changes */
+  width: calc(33.33% - 20px); /* Three logos per row with margin */
+  background-color: #20429c;
   position: relative;
+  margin: 10px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align children to the bottom */
+}
+
+.logo h3 {
+  font-size: 16px; /* Adjust font size as needed */
+  text-align: center; /* Center the text under the logo */
+  margin-top: 5px; /*Add some space between the logo and text */
+  color: #ffffff;
 }
 
 .logo img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.logo {
-  border: 1px solid black;
-  padding: 50px;
-  text-align: center;
-  width: 30%;
-  background-color: #f0f0f0;
-  position: relative;
-  transition: transform 0.3s;
+  max-width: 50%;
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: auto; /* Pushes the h3 to the bottom */
 }
 
 .logo:hover {
   transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+  .logo {
+    width: calc(100% - 20px); /* One logo per row on small screens */
+  }
 }
