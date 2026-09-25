@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "test:e2e:agent": "ts-node scripts/e2e/v4-2-agent-testnet.ts"
+  }
+}
